@@ -1,7 +1,7 @@
-import { FaviconUpdaterConfig } from "../config.ts";
-import convertAndMove from "./convertAndMove.mts";
-import download from "./download.mts";
-import { getFaviconUrl } from "./sanity.mts";
+import { FaviconUpdaterConfig } from "../config";
+import convertAndMove from "./convertAndMove";
+import download from "./download";
+import { getFaviconUrl } from "./sanity";
 
 export default async (config: FaviconUpdaterConfig) => {
     try {
