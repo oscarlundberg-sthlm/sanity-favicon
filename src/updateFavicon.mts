@@ -1,9 +1,9 @@
-// @ts-nocheck
-import convertAndMove from "./convertAndMove.mjs";
-import download from "./download.mjs";
-import { getFaviconUrl } from "./sanity.mjs";
+import { FaviconUpdaterConfig } from "../config.ts";
+import convertAndMove from "./convertAndMove.mts";
+import download from "./download.mts";
+import { getFaviconUrl } from "./sanity.mts";
 
-export default async (config) => {
+export default async (config: FaviconUpdaterConfig) => {
     try {
         // Get the favicon URL from Sanity
         const faviconUrl = await getFaviconUrl(config.sanity);
@@ -24,7 +24,7 @@ export default async (config) => {
         });
 
         return true;
-    } catch (error) {
+    } catch (error: any) {
         throw new Error(error);
     }
 };

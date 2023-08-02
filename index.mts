@@ -1,6 +1,5 @@
-// @ts-nocheck
-import { FaviconUpdaterConfig } from "./config";
-import updateFavicon from './src/updateFavicon.mjs';
+import { FaviconUpdaterConfig } from "./config.ts";
+import updateFavicon from './src/updateFavicon.mts';
 
 /**
  * @class FaviconUpdater
@@ -12,7 +11,7 @@ export class FaviconUpdater {
     async run() {
         try {
             return await this.#updateFavicon(this.config);
-        } catch (error) {
+        } catch (error: any) {
             throw new Error(error);
         }
     };
@@ -21,7 +20,7 @@ export class FaviconUpdater {
      * 
      * @param {FaviconUpdaterConfig} config 
      */
-    constructor(config) {
+    constructor(config: FaviconUpdaterConfig) {
         this.config = config;
         this.#updateFavicon = updateFavicon;
     }

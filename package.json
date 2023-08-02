@@ -2,11 +2,16 @@
   "name": "sanity-favicon",
   "version": "1.0.0",
   "description": "Given a favicon image field in Sanity, this can download and convert the image to .ico, and place it in the public folder.",
-  "main": "index.mjs",
+  "main": "index.mts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["Sanity", "NextJS", "favicon", "ico"],
+  "keywords": [
+    "Sanity",
+    "NextJS",
+    "favicon",
+    "ico"
+  ],
   "author": "Oscar Lundberg",
   "license": "ISC",
   "type": "module",
@@ -15,5 +20,9 @@
   },
   "dependencies": {
     "next-sanity": "^4.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "typescript": "^5.1.6"
   }
 }

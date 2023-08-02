@@ -1,7 +1,7 @@
-// @ts-nocheck
 import { createClient } from "next-sanity";
+import { FaviconUpdaterConfig } from "../config.ts";
 
-export const getFaviconUrl = (sanityConfig) => {
+export const getFaviconUrl = (sanityConfig: FaviconUpdaterConfig["sanity"]): Promise<string> => {
     const sanityClient = createClient(sanityConfig.clientConfig);
 
     return new Promise(async (resolve, reject) => {

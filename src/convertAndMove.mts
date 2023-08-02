@@ -1,13 +1,16 @@
-// @ts-nocheck
-import { exec } from "node:child_process";
+import { ExecException, exec } from "node:child_process";
+
+interface ConvertAndMoveConfig {
+    targetFolder: string;
+}
 
 export default (
-    inputImagePath, 
-    { targetFolder }
+    inputImagePath: string, 
+    { targetFolder }: ConvertAndMoveConfig
 ) => {
     return new Promise((resolve, reject) => {
         
-        const childProcessCallback = (error, stdout, stderr) => {
+        const childProcessCallback = (error: ExecException|null, stdout: string, stderr: string) => {
             if (error) {
                 reject(error);
             }

@@ -1,9 +1,12 @@
-// @ts-nocheck
 import * as fs from 'node:fs/promises';
 
+interface DownloadConfig {
+    folder: string;
+}
+
 export default async (
-    url, 
-    { folder }
+    url: string, 
+    { folder }: DownloadConfig
 ) => {    
     try {
         const response = await fetch(url);
@@ -33,7 +36,7 @@ export default async (
         const customPath = `${folder}/temporaryFaviconDownloadBeforeConversion${fileExtension}`;
         await fs.writeFile(customPath, fileBuffer);
         return customPath;
-    } catch (error) {
+    } catch (error: any) {
         throw new Error(error);
     }   
 };
