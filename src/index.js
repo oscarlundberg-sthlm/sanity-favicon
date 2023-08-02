@@ -27,7 +27,3 @@ export class FaviconUpdater {
         this.#updateFavicon = updateFavicon;
     }
 }
-
-module.exports = {
-    FaviconUpdater
-};
