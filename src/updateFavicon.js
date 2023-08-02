@@ -1,9 +1,8 @@
-import { FaviconUpdaterConfig } from "../config";
 import convertAndMove from "./convertAndMove";
 import download from "./download";
 import { getFaviconUrl } from "./sanity";
 
-export default async (config: FaviconUpdaterConfig) => {
+export default async (config) => {
     try {
         // Get the favicon URL from Sanity
         const faviconUrl = await getFaviconUrl(config.sanity);
@@ -24,7 +23,7 @@ export default async (config: FaviconUpdaterConfig) => {
         });
 
         return true;
-    } catch (error: any) {
+    } catch (error) {
         throw new Error(error);
     }
 };

@@ -1,7 +1,6 @@
 import { createClient } from "next-sanity";
-import { FaviconUpdaterConfig } from "../config";
 
-export const getFaviconUrl = (sanityConfig: FaviconUpdaterConfig["sanity"]): Promise<string> => {
+export const getFaviconUrl = (sanityConfig) => {
     const sanityClient = createClient(sanityConfig.clientConfig);
 
     return new Promise(async (resolve, reject) => {

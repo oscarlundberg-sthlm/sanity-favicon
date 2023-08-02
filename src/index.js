@@ -11,7 +11,7 @@ export class FaviconUpdater {
     async run() {
         try {
             return await this.#updateFavicon(this.config);
-        } catch (error: any) {
+        } catch (error) {
             throw new Error(error);
         }
     };
@@ -20,7 +20,7 @@ export class FaviconUpdater {
      * 
      * @param {FaviconUpdaterConfig} config 
      */
-    constructor(config: FaviconUpdaterConfig) {
+    constructor(config) {
         this.config = config;
         this.#updateFavicon = updateFavicon;
     }
