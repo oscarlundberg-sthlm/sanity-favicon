@@ -1,6 +1,6 @@
-import convertAndMove from "./convertAndMove";
-import download from "./download";
-import { getFaviconUrl } from "./sanity";
+import convertAndMove from "./convertAndMove.js";
+import download from "./download.js";
+import { getFaviconUrl } from "./sanity.js";
 
 export default async (config) => {
     try {

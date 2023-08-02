@@ -1,5 +1,5 @@
-import { FaviconUpdaterConfig } from "../config";
-import updateFavicon from './updateFavicon';
+import { FaviconUpdaterConfig } from "../config.ts";
+import updateFavicon from './updateFavicon.js';
 
 /**
  * @class FaviconUpdater
