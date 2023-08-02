@@ -1,5 +1,8 @@
-import { FaviconUpdaterConfig } from "../config.ts";
 import updateFavicon from './updateFavicon.js';
+
+/**
+ * @typedef { import("../types/FaviconUpdaterConfig").FaviconUpdaterConfig } FaviconUpdaterConfig
+ */
 
 /**
  * @class FaviconUpdater
@@ -17,8 +20,7 @@ export class FaviconUpdater {
     };
 
     /**
-     * 
-     * @param {FaviconUpdaterConfig} config 
+     * @param {FaviconUpdaterConfig} config
      */
     constructor(config) {
         this.config = config;
