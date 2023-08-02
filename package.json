@@ -1,0 +1,19 @@
+{
+  "name": "sanity-favicon",
+  "version": "1.0.0",
+  "description": "Given a favicon image field in Sanity, this can download and convert the image to .ico, and place it in the public folder.",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "next-sanity": "^4.1.6"
+  }
+}
