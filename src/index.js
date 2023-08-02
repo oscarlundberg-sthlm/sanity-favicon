@@ -1,7 +1,7 @@
 import updateFavicon from './updateFavicon.js';
 
 /**
- * @typedef { import("../types/FaviconUpdaterConfig").FaviconUpdaterConfig } FaviconUpdaterConfig
+ * @typedef { import("../types/FaviconUpdaterConfig.d.ts").FaviconUpdaterConfig } FaviconUpdaterConfig
  */
 
 /**
