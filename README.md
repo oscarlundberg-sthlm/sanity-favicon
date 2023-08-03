@@ -7,3 +7,5 @@ Given a sanity image field, this will:
 3. Move the favicon.ico to the public folder
 
 The idea is to run this when the sanity field is updated, for example on a sanity webhook endpoint.
+
+Requires Image Magick (https://imagemagick.org/)
