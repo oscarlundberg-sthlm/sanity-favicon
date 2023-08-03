@@ -1,9 +1,6 @@
 import * as fs from 'node:fs/promises';
 
-export default async (
-    url, 
-    { folder }
-) => {    
+export default async (url) => {    
     try {
         const response = await fetch(url);
 
@@ -29,7 +26,7 @@ export default async (
 
         const fileBuffer = new Uint8Array(await data.arrayBuffer());
 
-        const customPath = `${folder}/temporaryFaviconDownloadBeforeConversion${fileExtension}`;
+        const customPath = `tmp/temporaryFaviconDownloadBeforeConversion${fileExtension}`;
         await fs.writeFile(customPath, fileBuffer);
         return customPath;
     } catch (error) {

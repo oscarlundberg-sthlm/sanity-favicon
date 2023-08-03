@@ -1,6 +1,8 @@
 export interface FaviconUpdaterConfig {
   /**
-   * @example process.cwd() + '/public'
+   * @example 
+   * import path from "path";
+   * path.resolve("./public")
    */
   publicFolder: string;
   sanity: {

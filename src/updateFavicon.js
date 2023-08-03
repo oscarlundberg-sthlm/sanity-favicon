@@ -8,9 +8,7 @@ export default async (config) => {
         const faviconUrl = await getFaviconUrl(config.sanity);
         
         // Attempt to download the favicon from the URL
-        const pathToDownloadedFile = await download(faviconUrl, {
-            folder: config.publicFolder
-        });
+        const pathToDownloadedFile = await download(faviconUrl);
     
         if (!pathToDownloadedFile) {
             throw new Error('Favicon download failed');
