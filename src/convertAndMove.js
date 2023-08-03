@@ -26,12 +26,12 @@ export default (
 
         if (inputImagePath.endsWith('.ico')) {
             exec(
-                `mv ${inputImagePath} ${target}`, 
+                `cp ${inputImagePath} ${target}`, 
                 childProcessCallback
             );
         } else {
             exec(
-                `magick convert ${inputImagePath} -background transparent -define icon:auto-resize=16,24,32,48,64,72,96,128,256 ${target} && rm ${inputImagePath}`, 
+                `magick convert ${inputImagePath} -background transparent -define icon:auto-resize=16,24,32,48,64,72,96,128,256 ${target}`, 
                 childProcessCallback
             );
         }
