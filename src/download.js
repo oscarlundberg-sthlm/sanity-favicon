@@ -26,7 +26,7 @@ export default async (url) => {
 
         const fileBuffer = new Uint8Array(await data.arrayBuffer());
 
-        const customPath = `tmp/temporaryFaviconDownloadBeforeConversion${fileExtension}`;
+        const customPath = `/tmp/temporaryFaviconDownloadBeforeConversion${fileExtension}`;
         await fs.writeFile(customPath, fileBuffer);
         return customPath;
     } catch (error) {
