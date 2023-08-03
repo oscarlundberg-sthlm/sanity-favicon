@@ -1,5 +1,7 @@
-import { dotenv } from "dotenv";
+import pkg from 'dotenv';
 import { exec } from "node:child_process";
+
+const { dotenv } = pkg;
 dotenv.config();
 
 export default (
